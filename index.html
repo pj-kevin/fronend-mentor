@@ -1,0 +1,101 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>My Website</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+    body{
+        background: rgb(40,84,255);
+        color:white;
+        border-sizing:border-box;
+        font-family: 'Inter', sans-serif;
+
+    }
+    h1{
+        color:white;
+        font-size: 55px;
+
+    }
+    p{
+        color:white;
+        font-size: 18px;
+    }
+    .hero{
+        display:grid;
+        grid-template-columns:0.9fr 1.1fr;
+        min-height:90vh;
+         }
+    .left{
+        align-items:flex-start;
+        justify-content:center;
+        display:flex;
+        flex-direction:column;
+        border-right:1px solid rgba(255,255,255,0.2);
+        padding-left:28px;  
+    }
+    .stats{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+    }
+    .stat{
+        padding:28px;
+        min-height:260px;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        border-right:1px solid rgba(255,255,255,0.2);
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+
+    }
+    .stat span:first-child{ 
+        font-size: 52px; font-weight: 600;
+    }
+    .stat span:last-child{ 
+        font-size: 13px; opacity: 0.7; 
+    }
+    .stat:nth-child(2), .stat:nth-child(4){ 
+        border-right: none;
+    }
+    .stat:nth-child(3), .stat:nth-child(4){ 
+        border-bottom: none; 
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 28px;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    .stat-top{
+         display:flex; justify-content:space-between; align-items:start;
+    }
+    .stat-top span:last-child{ 
+        font-size:28px; font-weight:500;
+    }
+    .stat-bottom span{
+         font-size:14px; 
+    }
+    .stat-bottom small{
+         font-size:11px; opacity:0.6; display:block; margin-top:4px;
+    }
+    </style>
+    </head>
+        <body>
+            <header>
+                <h2>● Bridge Collective</h2>  
+                <div>☰</div> 
+            </header>
+            <div class="hero">
+                <div class="left">
+        <h1>A classroom <br> for every child</h1>
+        <p>We fund the schools,train the teachers,and <br> measure what works - so every child we reach<br> today becomes a graduate tomorrow </p>
+            </div>
+         <div class="stats">
+            <div class="stat"><span>✦</span> <span>2.4M</span><span>Students reached</span><small>Across 31 countries since 2011.</small></div>
+            <div class="stat"><span>+</span><span>1,284</span><span>Schools partnered</span><small>13 countries from Kenya,to guetamala</small></div>
+            <div class="stat"><span> →</span><span>38K</span><span>teachers trained</span><small>Equipped with moredn tools and methodlogy</small></div>
+            <div class="stat"><span>↗</span><span>3.1x</span><span>Graduation lift</span><small>Partnered schools outperform national average 3x</small></div>
+         </div>
+         </div>
+         
+</html>
