@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <h1 id="welcome-msg">Hello World</h1>
     <script>
         // starting JS DAY 1 //
         //basic//
@@ -20,9 +20,26 @@
         let male=true;
         console.log(male);    
         //bracket notation
-    let person={}
-       person["name"] = "bro code";
+        let person={}
+       person["name"] = "kevin";
        console.log(person.name);
+       //dom manuplation
+       document.body.style.backgroundColor="lightgreen";
+
+        const username="  Kevin";
+        const welcomeMsg = document.getElementById("welcome-msg");
+        welcomeMsg.textContent+=username ===""? `guest` :username;
     </script>
+    <style>
+        h1{
+            color:white;
+            align-items:center;
+            justify-content:center;
+            display:flex;
+            flex-direction:column;
+            border: 2px solid black;
+           
+        }
+    </style>
 </body>
 </html>
