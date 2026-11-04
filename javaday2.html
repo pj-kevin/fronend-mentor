@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color:whitesmoke">Day 3 Of JS</h1>
+    <p style="color:black">so basically day 3 of my JS journey and i am currently learning  DOM manuplation</p>
+    <input type="button" value=" dont Click Me">
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5+Duo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <ul id="fruits">
+        <li>Apple</li>
+        <li>banana</li>
+        <li>orange</li>
+    </ul>
+    <ul id="vegetables">
+        <li>Carrot</li>
+        <li>Onion</li>
+        <li>potato</li>
+    </ul>
+
+    <style>
+        body{
+            font-family: 'Tiny5 Duo', sans-serif;
+            background-color:yellowgreen;
+            border: 2px solid black;
+            border-radius: 20px;
+            align-items:center;
+            display:flex;
+            flex-direction:column; 
+           
+        }
+        p{
+            color:black;
+            align-items:center;
+            justify-content:center;
+            display:flex;
+            flex-direction:column;
+            font-size: 20px;
+            
+        }
+
+        input{
+            color:white;
+            background-color:black;
+            height: 30px;
+            width: 110px;
+        }
+     </style>
+     <script>
+        const element = document.getElementById("fruits");
+        const firstChild = element.firstElementChild;
+        firstChild.style.backgroundColor = "red";
+
+        
+        
+     </script>
+</body>
+</html>
