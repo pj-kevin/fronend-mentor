@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Neoncore - Join The Nexus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Redaction+35:ital,wght@0,400;0,700;1,400&family=Tiny5+Duo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-image: url("bg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-color: #0D1217;
+      color: white;
+      font-family: 'Redaction 35', sans-serif;
+      min-height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* TOP LEFT - Neoncore */
+    .top-left {
+      position: absolute;
+      top: 18px;
+      left: 20px;
+      z-index: 10;
+    }
+    .top-left h2 { font-size: 18px; font-weight: 400; }
+   
+
+    /* MIDDLE LEFT - Big heading */
+    .hero {
+      position: absolute;
+      top: 38%;
+      left: 20px;
+      transform: translateY(-50%);
+      z-index: 10;
+      color: beige;
+      font-size: 67px;
+      line-height: 1;
+    }
+
+    /* BOTTOM LEFT - Operator status */
+    .operator {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      z-index: 10;
+      color: gold;
+      font-family: 'Redaction 35', sans-serif;
+      line-height: 1.9;
+    }
+    .operator h5 { margin-bottom: 6px; }
+
+    /* RIGHT - Login Card, this is the overlap */
+    .login-card {
+      position: absolute;
+      right: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 420px;
+      height: 620px;
+      padding: 28px;
+      z-index: 20;
+      background: rgba(10, 15, 20, 0.55);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 16px;
+      backdrop-filter: blur(8px);
+    }
+    .login-card h2 { font-size: 42px; margin-bottom: 20px; color: beige; }
+    .login-card label { display: block; font-size: 12px; letter-spacing: 2px; margin: 14px 0 6px; color: #ddd; }
+    .login-card input {
+      width: 100%; padding: 12px;
+      background: #0D1217; color: white;
+      border: 1px solid #444; border-radius: 8px;
+      outline: none;
+    }
+    .login-card input:focus { border-color: gold; }
+    .login-card button {
+      width: 100%; margin-top: 22px; padding: 13px;
+      background: gold; color: black; font-weight: 700;
+      border: none; border-radius: 8px; cursor: pointer;
+    }
+    .row { display: flex; gap: 8px; align-items: center; font-size: 12px; margin-top: 12px; }
+  </style>
+</head>
+<body>
+
+  <div class="top-left">
+    <h2>Neoncore</h2>
+    <div class="mini-bar"></div>
+  </div>
+
+  <div class="hero">//JOIN THE NEXUS</div>
+
+  <div class="operator">
+    <h5>OPERATOR ID <span id="count">0/5</span> READY</h5>
+    <h3>UNASSIGNED</h3>
+    <h3>CALLSIGN .... <span id="show-callsign">PENDING</span></h3>
+    <h3>EMAIL .... <span id="show-email">PENDING</span></h3>
+    <h3>PASSWORD .... <span id="show-password">PENDING</span></h3>
+    <h3>CONFIRM .... <span id="show-confirm">PENDING</span></h3>
+    <h3>TERMS .... <span id="show-terms">PENDING</span></h3>
+  </div>
+
+  <div class="login-card">
+    <h2>Login</h2>
+    <label>CALLSIGN</label>
+    <input id="callsign" placeholder="Enter callsign">
+    <label>EMAIL</label>
+    <input id="email" placeholder="Enter email">
+    <label>PASSWORD</label>
+    <input id="password" type="password" placeholder="Enter password">
+    <label>CONFIRM PASSWORD</label>
+    <input id="confirm" type="password" placeholder="Confirm password">
+    <div class="row"><input type="checkbox" id="terms" style="width:auto"> <span>Accept Terms</span></div>
+    <button>JOIN NEXUS</button>
+  </div>
+
+  <script>
+    function update(id, showId) {
+      const val = document.getElementById(id).value;
+      document.getElementById(showId).textContent = val ? val : "PENDING";
+      let filled = 0;
+      if (document.getElementById("callsign").value) filled++;
+      if (document.getElementById("email").value) filled++;
+      if (document.getElementById("password").value) filled++;
+      if (document.getElementById("confirm").value) filled++;
+      if (document.getElementById("terms").checked) filled++;
+      document.getElementById("count").textContent = filled + "/5";
+      document.getElementById("show-terms").textContent = document.getElementById("terms").checked ? "ACCEPTED" : "PENDING";
+    }
+    ["callsign","email","password","confirm"].forEach(id => {
+      document.getElementById(id).addEventListener("input", () => update(id, "show-" + id));
+    });
+    document.getElementById("terms").addEventListener("change", () => update());
+    console.log("hello world");
+  </script>
+</body>
+</html>
