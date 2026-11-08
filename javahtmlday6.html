@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Neoncore - Join The Nexus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Redaction+35:ital,wght@0,400;0,700;1,400&family=Tiny5+Duo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Redaction+20:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+  body{
+    background-image:url(bg.jpg);
+    background-size:cover;
+    background-position:center;
+    height:100vh;
+    position:relative;
+  }
+  .top-left{
+    color:white;
+    font-family: 'Redaction 35', sans-serif;
+    width: fit-content;
+    height:auto;
+    margin-top: 50px;
+    margin-left: 25px;
+  }
+
+  /* align_items = x-axis, justify-content = y-axis */
+
+  .hero{
+    font-family: 'Black Ops One', cursive;
+    color:beige;
+    font-size: 3.9em;
+    align-items:flex-start;
+    display: flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    padding-left:45px;
+    width: fit-content;
+    height:auto;
+    margin-top: 150px;
+
+    
+  }
+  .operator{
+    font-family: 'Redaction 35', sans-serif;
+    color:beige;
+    font-size:20px;
+    justify-content:center;
+    align-items:center;
+    border: 2px solid gold;
+    padding-left:65px;
+    width: fit-content;
+    height:auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding-right: 65px;
+    background-color: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.30);
+  }
+  .login{
+    border: 2px solid gold;
+    width:fit-content;
+    height:auto;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    flex-direction:column;
+    position:absolute;
+    right:1px;
+    margin-right:140px;
+    padding: 80px;
+    background-color: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(12px);
+    border-radius:20px;
+    top:35%;
+    
+  }
+    </style>
+</head>
+<body>
+
+  <div class="top-left">
+    <h2>Neoncore</h2>
+    <div class="mini-bar"></div>
+  </div>
+
+  <div class="hero">//JOIN THE NEXUS</div>
+
+  <div class="operator">
+    <h5>OPERATOR ID <span id="count">0/5</span> READY</h5>
+    <h3>UNASSIGNED</h3>
+    <h3>CALLSIGN ............... <span id="show-callsign">PENDING</span></h3>
+    <h3>EMAIL ...................... <span id="show-email">PENDING</span></h3>
+    <h3>PASSWORD .............<span id="show-password">PENDING</span></h3>
+    <h3>CONFIRM ................ <span id="show-confirm">PENDING</span></h3>
+    <h3>TERMS ..................... <span id="show-terms">PENDING</span></h3>
+  </div>
+
+
+
+  <div class="login">
+    <div>
+      <label for="name">NAME</label>
+      <input type="text" id="name" placeholder="name">
+    </div>
+    <div>
+      <label for="password">PASSWORD</label>
+      <input type="password" id="password" placeholder="password">
+    </div>
+    <div>
+      <label for="email">E-MAIL</label>
+      <input type="email" id="email" placeholder="email">
+    </div>
+  </div>
+
+  
+  <script>
+   
+  </script>
+</body>
+</html>
